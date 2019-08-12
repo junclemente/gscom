@@ -1,0 +1,150 @@
+body {
+  padding-top: 60px;
+  background: #fff;
+}
+
+.table {
+  width: 75%;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ID */
+#business_image_right {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  min-height: 100px;
+}
+
+#jumbotron_logo {
+  padding-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+}
+
+/* Class */
+.jumbotron {
+  background: #000033;
+  color: white;
+}
+
+/* Carousel */
+#business-carousel {
+ margin-bottom: 20px;
+}
+
+#business-carousel .item {
+ height: 350px;
+}
+
+#b-slide1 {
+ background: url('../images/backhaul_1.png') center center no-repeat;
+}
+
+#b-slide2 {
+ background: url('../images/backhaul_2.png') center center no-repeat;
+}
+
+#b-slide3 {
+  background: url('../images/backhaul_3.png') center center no-repeat;
+}
+
+#index-carousel {
+  margin-bottom: 20px;
+}
+
+#index-carousel .item {
+  height: 350px;
+}
+
+#i-slide1 {
+  background: url('../images/network_1.png') center center no-repeat;
+}
+
+#i-slide2 {
+  background: url('../images/network_2.png') center center no-repeat;
+}
+
+/* Navbar
+Customized navbar using
+work.smarchal.com/twbscolor
+by Samuel Marchal
+*/
+.navbar-default {
+  background-color: #000000;
+  border-color: #474747;
+}
+.navbar-default .navbar-brand {
+  color: #8d8d8d;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #8d8d8d;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #8d8d8d;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #474747;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #474747;
+}
+.navbar-default .navbar-toggle {
+  border-color: #474747;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #474747;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #8d8d8d;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #8d8d8d;
+}
+.navbar-default .navbar-link {
+  color: #8d8d8d;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #8d8d8d;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #474747;
+  }
+}
+
+/* Media Queries */
+@media screen and (min-width: 481px) {
+  .hidden_desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hidden_mobile {
+    display: none;
+  }
+}
