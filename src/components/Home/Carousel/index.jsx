@@ -1,6 +1,5 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
-import Container from "react-bootstrap/Container";
+import { Carousel, Container } from "react-bootstrap";
 
 import Carousel1 from "./network_1.png";
 import Carousel2 from "./network_2.png";

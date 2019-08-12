@@ -9,16 +9,20 @@
     rgba(105, 105, 105, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#696969', endColorstr='#696969', GradientType=1 );
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .image {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   margin-left: auto;
   margin-right: auto;
+  margin: auto;
   display: block;
-  height: 350px;
-  width: 80%;
+  vertical-align: middle;
+}
+
+.height {
+  height: 400px;
 }

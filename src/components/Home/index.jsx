@@ -1,9 +1,5 @@
 import React from "react";
-
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Jumbotron, Container, Row, Col } from "react-bootstrap";
 
 import Carousel from "./Carousel";
 import Logo from "./gscom_logo.jpg";
