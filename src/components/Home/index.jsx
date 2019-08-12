@@ -14,8 +14,8 @@ const Home = () => (
     <Jumbotron className={styles.root}>
       <Container>
         <Row>
-          <Col>
-            <img className={styles.image} src={Logo} height={150} alt="GScom" />
+          <Col md={3}>
+            <img src={Logo} height={150} alt="GScom" />
           </Col>
           <Col>
             <p>
@@ -28,7 +28,7 @@ const Home = () => (
         </Row>
       </Container>
     </Jumbotron>
-    <div>
+    <Container>
       <p>
         GScom’s innovative technology leadership combined with our innovative
         design services experience enables our customers the ability to rapidly
@@ -39,8 +39,23 @@ const Home = () => (
         communication providing a broad spectrum of wireless communication core
         technologies and intellectual properties.
       </p>
-    </div>
-    <Carousel />
+    </Container>
+    <Container>
+      <Carousel />
+      <p className={styles.smallText}>
+        GScom’s wireless communication core technologies and 4096-QAM modem
+        address a wide variety of system-level challenges in wireless
+        communications, including performance with very high speed (up to Giga
+        bit speed) data communication in a broadband spectrum ranging from
+        cellular band frequencies up to microwave or millimeter wave band
+        frequencies.
+      </p>
+      <p className={styles.smallText}>
+        GScom’s wireless 4096-QAM modem yields the most reliable and the best
+        performance in a broadband wireless backhaul communication channel in
+        the small cell or macro cell communication network systems.
+      </p>
+    </Container>
   </div>
 );
 
