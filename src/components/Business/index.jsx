@@ -2,10 +2,10 @@ import React from "react";
 import { Container } from "react-bootstrap";
 
 import BusinessCarousel from "./Carousel";
+import styles from "./Business.module.scss";
 
 const Business = () => (
-  <Container>
-    <h1>Business</h1>
+  <Container className={styles.root}>
     <BusinessCarousel />
     <div>
       <p>

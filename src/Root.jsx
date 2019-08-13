@@ -1,5 +1,15 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
+
 import { Helmet } from "react-helmet";
+import {
+  HOME_URL,
+  BUSINESS_URL,
+  PRODUCTS_URL,
+  CONTACTUS_URL,
+  WHITEPAPER_URL
+} from "./constants/urls";
+
 import "./styles/main.scss";
 
 import Business from "./components/Business";
@@ -8,6 +18,7 @@ import Home from "./components/Home";
 import Navigation from "./components/common/Navigation";
 import Products from "./components/Products";
 import TopPadding from "./components/common/TopPadding";
+import WhitePaper from "./components/WhitePapers";
 
 const Root = () => (
   <div>
@@ -18,10 +29,14 @@ const Root = () => (
     </Helmet>
     <Navigation />
     <TopPadding />
-    <Home />
-    <Business />
-    <Products />
-    <ContactUs />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path={HOME_URL} component={Home} />
+      <Route exact path={BUSINESS_URL} component={Business} />
+      <Route exact path={PRODUCTS_URL} component={Products} />
+      <Route exact path={CONTACTUS_URL} component={ContactUs} />
+      <Route exact path={WHITEPAPER_URL} component={WhitePaper} />
+    </Switch>
   </div>
 );
 
