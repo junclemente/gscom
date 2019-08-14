@@ -29,7 +29,8 @@ const Root = () => (
     <Navigation />
     <TopPadding />
     <Switch>
-      <Route path="/" component={Home} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/gscom" component={Home} />
       <Route exact path={HOME_URL} component={Home} />
       <Route exact path={BUSINESS_URL} component={Business} />
       <Route exact path={PRODUCTS_URL} component={Products} />
