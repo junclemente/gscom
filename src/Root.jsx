@@ -30,10 +30,10 @@ const Root = () => (
     <TopPadding />
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path={HOME_URL} component={Home} />
-      <Route path={BUSINESS_URL} component={Business} />
-      <Route path={PRODUCTS_URL} component={Products} />
-      <Route path={CONTACTUS_URL} component={ContactUs} />
+      <Route exact path={HOME_URL} component={Home} />
+      <Route exact path={BUSINESS_URL} component={Business} />
+      <Route exact path={PRODUCTS_URL} component={Products} />
+      <Route exact path={CONTACTUS_URL} component={ContactUs} />
     </Switch>
   </div>
 );
