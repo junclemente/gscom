@@ -1,9 +1,0 @@
-export const AGC_DESIGN = "./AGC_Design.pdf";
-export const BROADBAND_WIRELESS = "./Broadband_wireless_4096-QAM_Modem.pdf";
-export const BUSINESS_DEVELOPMENT = "./Business_Development.pdf";
-export const BUSINESS_PROPOSAL = "./Business_Proposal.pdf";
-export const DFE_CARRIER_RECOVERY = "./DFE_and_Carrier_Recovery.pdf";
-export const LDPC_DESIGN = "./LDPC_System_Design.pdf";
-export const MAPPER = "./Mapper.pdf";
-export const PROJECT_BUDGET = "./Project_Budget.pdf";
-export const REED_SOLOMON_CODEC = "./Reed-Solomon_Codec.pdf";
