@@ -1,5 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { LinkPdf } from "../../common/PDFLink";
+
+import CODEC from "../../../files/Reed-Solomon_Codec.pdf";
+import LDPC from "../../../files/LDPC_System_Design.pdf";
+import MAPPER from "../../../files/Mapper.pdf";
+import DFE from "../../../files/DFE_and_Carrier_Recovery.pdf";
+import AGC from "../../../files/AGC_Design.pdf";
 
 const Core = () => (
   <Container>
@@ -53,14 +60,7 @@ const Core = () => (
           (when used in a cascaded form of the R-S and LDPC codes)
         </li>
       </ul>
-      <h4>
-        <a
-          href="{{ url_for('whitepaper', whitepaper = 'Reed-Solomon Codec.pdf') }}"
-          target="_blank"
-        >
-          White Paper: Reed-Solomon Codec
-        </a>
-      </h4>
+      <LinkPdf href={CODEC} title="White Paper: Reed-Solomon Codec" />
       <li>
         <h3>LDPC (Low Density Parity Check) codec</h3>
       </li>
@@ -92,14 +92,10 @@ const Core = () => (
           code rate of 0.5 in the reasonable SNR ranges for data communication.
         </li>
       </ul>
-      <h4>
-        <a
-          href="{{ url_for('whitepaper', whitepaper = 'LDPC System Design.pdf') }}"
-          target="_blank"
-        >
-          White Paper: LDPC Algorithm &amp; System Design
-        </a>
-      </h4>
+      <LinkPdf
+        href={LDPC}
+        title="White Paper: LDPC Algorithm &amp; System Design"
+      />
       <li>
         <h3>Mapper / De-mapper (Slicer)</h3>
       </li>
@@ -119,14 +115,10 @@ const Core = () => (
         <li>4096-QAM De-mapper (Slicer)</li>
         <p>GScom has developed a real-time 4096-QAM mapper/de-mapper.</p>
       </ul>
-      <h4>
-        <a
-          href="{{ url_for('whitepaper', whitepaper = 'Mapper.pdf') }}"
-          target="_blank"
-        >
-          White Paper: Mapper &amp; De-Mapper System Document
-        </a>
-      </h4>
+      <LinkPdf
+        href={MAPPER}
+        title="White Paper: Mapper &amp; De-Mapper System Document"
+      />
       <li>
         <h3>Equalizer combined with carrier recovery</h3>
       </li>
@@ -146,15 +138,11 @@ const Core = () => (
         against phase noise through the latency reduction between phase noise
         estimation and correction.
       </p>
-      <h4>
-        <a
-          href="{{ url_for('whitepaper', whitepaper = 'DFE and Carrier Recovery.pdf') }}"
-          target="_blank"
-        >
-          White Paper: Decision Feedback Equalizer (DFE) combined with Carrier
-          Recovery
-        </a>
-      </h4>
+      <LinkPdf
+        href={DFE}
+        title="White Paper: Decision Feedback Equalizer (DFE) combined with Carrier
+        Recovery"
+      />
 
       <li>
         <h3>Time tracking (symbol tracking and frame tracking)</h3>
@@ -186,14 +174,10 @@ const Core = () => (
         <li>Flat fading rate of 100 dB / sec</li>
         <li>Output signal level of 20 dBm +/- 3dB.</li>
       </ul>
-      <h4>
-        <a
-          href="{{ url_for('whitepaper', whitepaper = 'AGC Design.pdf') }}"
-          target="_blank"
-        >
-          White Paper: Automatic Gain Control Systems Document
-        </a>
-      </h4>
+      <LinkPdf
+        href={AGC}
+        title="White Paper: Automatic Gain Control Systems Document"
+      />
 
       <li>
         <h3>ACM (Adaptive Coding and Modulation)</h3>

@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
+import { LinkPdf } from "../../common/PDFLink";
 import styles from "./Modem.module.scss";
+
+import WIRELESS from "../../../files/Broadband_wireless_4096-QAM_Modem.pdf";
 
 const Modem = () => (
   <Container>
@@ -102,7 +105,10 @@ const Modem = () => (
       link for a detailed system description and performance simulation results
       of the modem.
     </p>
-    <a href="#link">White Paper: Broadband wireless 4096-QAM Modem</a>
+    <LinkPdf
+      href={WIRELESS}
+      title="White Paper: Broadband wireless 4096-QAM Modem"
+    />
   </Container>
 );
 

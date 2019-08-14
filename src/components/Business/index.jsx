@@ -2,7 +2,10 @@ import React from "react";
 import { Container } from "react-bootstrap";
 
 import BusinessCarousel from "./Carousel";
+import { LinkPdf } from "../common/PDFLink";
 import styles from "./Business.module.scss";
+
+import PROPOSAL from "../../files/Business_Proposal.pdf";
 
 const Business = () => (
   <Container className={styles.root}>
@@ -45,8 +48,10 @@ const Business = () => (
             using custom designed Field-Programmable-Gate-Arrays (FPGAs).
           </p>
           <p>
-            Please refer to the <a href="#link">Business Proposal link</a> for a
-            detailed product development activity and milestone of the modem.
+            Please refer to the{" "}
+            <LinkPdf href={PROPOSAL} title="Business Proposal Link" />
+            for a detailed product development activity and milestone of the
+            modem.
           </p>
         </li>
         <li>

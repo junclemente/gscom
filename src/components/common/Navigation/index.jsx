@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Nav, Navbar, Dropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
+import PdfLink from "../PDFLink";
 import {
   HOME_URL,
   BUSINESS_URL,
@@ -10,17 +11,17 @@ import {
   CONTACTUS_URL,
   WHITEPAPER_URL
 } from "../../../constants/urls";
-import {
-  AGC_DESIGN,
-  BROADBAND_WIRELESS,
-  BUSINESS_DEVELOPMENT,
-  BUSINESS_PROPOSAL,
-  DFE_CARRIER_RECOVERY,
-  LDPC_DESIGN,
-  MAPPER,
-  PROJECT_BUDGET,
-  REED_SOLOMON_CODEC
-} from "../../WhitePapers/paper_urls";
+
+import AGC from "../../../files/AGC_Design.pdf";
+import WIRELESS from "../../../files/Broadband_wireless_4096-QAM_Modem.pdf";
+import DEVELOPMENT from "../../../files/Business_Development.pdf";
+import PROPOSAL from "../../../files/Business_Proposal.pdf";
+import DFE from "../../../files/DFE_and_Carrier_Recovery.pdf";
+import LDPC from "../../../files/LDPC_System_Design.pdf";
+import MAPPER from "../../../files/Mapper.pdf";
+import BUDGET from "../../../files/Project_Budget.pdf";
+import CODEC from "../../../files/Reed-Solomon_Codec.pdf";
+
 import Logo from "../../Home/gscom_logo.jpg";
 import styles from "./Navigation.module.scss";
 
@@ -47,84 +48,15 @@ const Navigation = () => (
           <Dropdown as={Nav.Item}>
             <Dropdown.Toggle as={Nav.Link}>White Papers</Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item
-                as={Link}
-                to={{ pathname: WHITEPAPER_URL, state: { paper: "AGC" } }}
-              >
-                AGC Design
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={{
-                  pathname: WHITEPAPER_URL,
-                  state: { paper: "WIRELESS" }
-                }}
-              >
-                Broadband Wireless Modem
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={{
-                  pathname: WHITEPAPER_URL,
-                  state: { paper: "DFE" }
-                }}
-              >
-                DFE and Carrier Recovery
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={{
-                  pathname: WHITEPAPER_URL,
-                  state: { paper: "LDPC" }
-                }}
-              >
-                LDPC System Design
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={{
-                  pathname: WHITEPAPER_URL,
-                  state: { paper: "MAPPER" }
-                }}
-              >
-                Mapper
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={{
-                  pathname: WHITEPAPER_URL,
-                  state: { paper: "BUDGET" }
-                }}
-              >
-                Project Budget
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={{
-                  pathname: WHITEPAPER_URL,
-                  state: { paper: "PROPOSAL" }
-                }}
-              >
-                Business Proposal
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={{
-                  pathname: WHITEPAPER_URL,
-                  state: { paper: "DEVELOPMENT" }
-                }}
-              >
-                Business Development
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={{
-                  pathname: WHITEPAPER_URL,
-                  state: { paper: "CODEC" }
-                }}
-              >
-                Reed-Solomon Codec
-              </Dropdown.Item>
+              <PdfLink href={AGC} title="AGC Design" />
+              <PdfLink href={WIRELESS} title="Broadband Wireless Modem" />
+              <PdfLink href={DFE} title="DFE and Carrier Recovery" />
+              <PdfLink href={LDPC} title="LDPC System Design" />
+              <PdfLink href={MAPPER} title="Mapper" />
+              <PdfLink href={BUDGET} title="Project Budget" />
+              <PdfLink href={PROPOSAL} title="Business Proposal" />
+              <PdfLink href={DEVELOPMENT} title="Business Development" />
+              <PdfLink href={CODEC} title="Reed-Solomon Codec" />
             </Dropdown.Menu>
           </Dropdown>
           <Nav.Link as={Link} to={CONTACTUS_URL}>

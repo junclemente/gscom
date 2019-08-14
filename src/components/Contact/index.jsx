@@ -13,7 +13,7 @@ const ContactUs = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img class="img-responsive" src={Map} alt="Map" />
+          <img className="img-responsive" src={Map} alt="Map" />
         </a>
       </Col>
       <Col>
@@ -24,14 +24,8 @@ const ContactUs = () => (
           <br />
           Los Angeles, CA 90036
           <br />
-          <div class="hidden_mobile">
+          <div className="hidden_mobile">
             <abbr title="Phone">P: </abbr>858-776-0290
-          </div>
-          <div class="hidden_desktop">
-            <a href="tel:18587760290">
-              <span class="glyphicon glyphicon-earphone" aria-hidden="true" />{" "}
-              858.776.0290
-            </a>
           </div>
         </address>
 

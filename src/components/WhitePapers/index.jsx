@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { PDFReader } from "reactjs-pdf-reader";
+import React from "react";
 
+import { PDFReader } from "reactjs-pdf-reader";
 import AGC from "./AGC_Design.pdf";
 import WIRELESS from "./Broadband_wireless_4096-QAM_Modem.pdf";
 import DFE from "./DFE_and_Carrier_Recovery.pdf";
@@ -11,63 +11,52 @@ import PROPOSAL from "./Business_Proposal.pdf";
 import DEVELOPMENT from "./Business_Development.pdf";
 import CODEC from "./Reed-Solomon_Codec.pdf";
 
-class WhitePaper extends Component {
-  state = {
-    paper: "",
-    whitepaper: this.props.location.state.paper
-  };
+const WhitePaper = props => {
+  let paperValue = "";
+  const whitepaper = props.location.state.paper;
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState);
-    console.log(this.state.whitepaper);
-    return this.state.value != nextState.value;
+  switch (whitepaper) {
+    case "AGC":
+      paperValue = AGC;
+      break;
+    case "WIRELESS":
+      paperValue = WIRELESS;
+      break;
+    case "DFE":
+      paperValue = DFE;
+      break;
+    case "LDPC":
+      paperValue = LDPC;
+      break;
+    case "MAPPER":
+      paperValue = MAPPER;
+      break;
+    case "BUDGET":
+      paperValue = BUDGET;
+      break;
+    case "PROPOSAL":
+      paperValue = PROPOSAL;
+      break;
+    case "DEVELOPMENT":
+      paperValue = DEVELOPMENT;
+      break;
+    case "CODEC":
+      paperValue = CODEC;
+      break;
+    default:
+      paperValue = false;
   }
 
-  render() {
-    this.setState({ whitepaper: this.props.location.state.paper });
-    // console.log(this.state.whitepaper);
-    switch (this.state.whitepaper) {
-      case "AGC":
-        this.state.paper = AGC;
-        break;
-      case "WIRELESS":
-        this.state.paper = WIRELESS;
-        break;
-      case "DFE":
-        this.state.paper = DFE;
-        break;
-      case "LDPC":
-        this.state.paper = LDPC;
-        break;
-      case "MAPPER":
-        this.state.paper = MAPPER;
-        break;
-      case "BUDGET":
-        this.state.paper = BUDGET;
-        break;
-      case "PROPOSAL":
-        this.state.paper = PROPOSAL;
-        break;
-      case "DEVELOPMENT":
-        this.state.paper = DEVELOPMENT;
-        break;
-      case "CODEC":
-        this.state.paper = CODEC;
-        break;
-      default:
-        this.state.paper = false;
-    }
-
-    return this.state.paper ? (
-      <div style={{ overflow: "scroll", height: 600 }}>
-        <PDFReader url={this.state.paper} showAllPage={true} />
-      </div>
-    ) : (
-      <div>
-        <h1>Paper not found.</h1>
-      </div>
-    );
-  }
-}
+  const paper = paperValue;
+  return paper ? (
+    <div style={{ overflow: "scroll", height: 800 }}>
+      <PDFReader url={paper} showAllPage={true} />
+    </div>
+  ) : (
+    <div>
+      <h1>Paper not found.</h1>
+    </div>
+  );
+};
 
 export default WhitePaper;
