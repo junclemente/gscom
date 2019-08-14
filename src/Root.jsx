@@ -18,7 +18,6 @@ import Home from "./components/Home";
 import Navigation from "./components/common/Navigation";
 import Products from "./components/Products";
 import TopPadding from "./components/common/TopPadding";
-import WhitePaper from "./components/WhitePapers";
 
 const Root = () => (
   <div>
@@ -35,7 +34,6 @@ const Root = () => (
       <Route exact path={BUSINESS_URL} component={Business} />
       <Route exact path={PRODUCTS_URL} component={Products} />
       <Route exact path={CONTACTUS_URL} component={ContactUs} />
-      <Route exact path={WHITEPAPER_URL} component={WhitePaper} />
     </Switch>
   </div>
 );
